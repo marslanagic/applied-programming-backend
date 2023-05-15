@@ -12,7 +12,7 @@ import lombok.Setter;
 @Setter
 
 @Entity
-@Table(name = "Admin")
+@Table(name = "Admin" )
 public class Admin {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
