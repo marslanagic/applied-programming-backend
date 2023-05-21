@@ -2,6 +2,7 @@ package com.project.controllers;
 
 import com.project.models.Admin;
 import com.project.models.Article;
+import com.project.models.ArticleCategory;
 import com.project.services.AdminService;
 import com.project.services.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,7 +37,7 @@ public class ArticleController {
     }
 
     @DeleteMapping()
-    public void deleteAll(){
+    public void deleteAll() {
         articleService.deleteAllArticles();
     }
 
@@ -50,6 +51,15 @@ public class ArticleController {
         return articleService.getArticlesById(id);
     }
 
+    @GetMapping("/category/{category}")
+    public List<Article> getArticleByCategory(@PathVariable ArticleCategory category) {
+        return articleService.getArticleByCategory(category);
+    }
+
+    @GetMapping("/heading/{heading}")
+    public List<Article> getArticleByHeading(@PathVariable String heading) {
+        return articleService.getArticleByHeading(heading);
+    }
 }
 
 
