@@ -1,13 +1,14 @@
 package com.project.services;
 
-
 import com.project.models.Article;
+import com.project.models.ArticleCategory;
 import com.project.repositories.ArticleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+
 @Service
 public class ArticleService {
     @Autowired
@@ -25,7 +26,7 @@ public class ArticleService {
         articleRepository.deleteById(id);
     }
 
-    public void deleteAllArticles (){
+    public void deleteAllArticles() {
         articleRepository.deleteAll();
     }
 
@@ -36,4 +37,13 @@ public class ArticleService {
     public Optional<Article> getArticlesById(Integer id) {
         return articleRepository.findById(id);
     }
+
+    public List<Article> getArticleByCategory(ArticleCategory a) {
+        return articleRepository.findArticleByCategory(a);
+    }
+
+    public List<Article> getArticleByHeading(String heading) {
+        return articleRepository.findArticleByHeading(heading);
+    }
+
 }

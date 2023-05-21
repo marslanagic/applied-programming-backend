@@ -34,7 +34,7 @@ public class AdminController {
     }
 
     @DeleteMapping()
-    public void deleteAll(){
+    public void deleteAll() {
         adminService.deleteAllAdmins();
     }
 
