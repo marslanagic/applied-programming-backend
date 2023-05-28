@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.w3c.dom.Text;
 
 import java.util.Date;
 
@@ -23,10 +24,10 @@ public class Article {
     @Column(name = "heading")
     private String heading;
 
-    @Column(name = "description")
+    @Column(name = "description", columnDefinition = "text")
     private String description;
 
-    @Column(name = "content")
+    @Column(name = "content", columnDefinition = "text")
     private String content;
 
     @Column(name = "date")

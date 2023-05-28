@@ -1,9 +1,7 @@
 package com.project.controllers;
 
-import com.project.models.Admin;
 import com.project.models.Article;
 import com.project.models.ArticleCategory;
-import com.project.services.AdminService;
 import com.project.services.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -11,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Random;
 
 @RestController
 @RequestMapping("/articles")
@@ -59,6 +58,13 @@ public class ArticleController {
     @GetMapping("/heading/{heading}")
     public List<Article> getArticleByHeading(@PathVariable String heading) {
         return articleService.getArticleByHeading(heading);
+    }
+
+    @GetMapping("/trending")
+    public Article getArticleByTrendingYes() {
+        List<Article> articles = articleService.getArticleByTrending();
+        Random random = new Random();
+        return articles.get(random.nextInt(articles.size()));
     }
 }
 
