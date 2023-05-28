@@ -46,4 +46,8 @@ public class ArticleService {
         return articleRepository.findArticleByHeading(heading);
     }
 
+    public List<Article> getArticleByTrending() {
+        return articleRepository.findArticleByTrending(true);
+    }
+
 }
