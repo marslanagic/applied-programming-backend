@@ -1,6 +1,23 @@
 # applied-programming-backend
-
 is a Java Spring Boot application for managing admins and articles.
+
+## Backend Initialization
+
+The backend part of this application was initialized using Spring Initializr. The project was created with the following configuration on [Spring Initializr](https://start.spring.io/):
+
+- Project Name: [Your Project Name]
+- Description: [Your Project Description]
+- Package: JAR
+- Type: Maven Project
+- Language: Java (Version 17)
+
+## Dependencies
+
+The following dependencies were added to the project:
+
+1. Spring Web: This dependency is used for building RESTful APIs and includes the Tomcat embedded server, which pulls in all the necessary dependencies for web development.
+
+2. Lombok: Lombok is a library that helps reduce boilerplate code by providing annotations to generate getter, setter, and other common methods.
 
 ## Features
 
@@ -28,8 +45,16 @@ Articles:
 - Java
 - Spring Boot
 - Hibernate
-- PostgreSQL
+- PostgreSQL (or your preferred database)
+- Maven (or Gradle for build management)
 - RESTful API
+
+## Getting Started
+
+...
+
+Rest of the README file remains the same.
+
 
 ## Getting Started
 
