@@ -51,13 +51,6 @@ Articles:
 
 ## Getting Started
 
-...
-
-Rest of the README file remains the same.
-
-
-## Getting Started
-
 ### Prerequisites
 
 - Java Development Kit (JDK) installed on your machine.
