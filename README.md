@@ -1,16 +1,3 @@
-# applied-programming-backend
-is a Java Spring Boot application for managing admins and articles.
-
-## Backend Initialization
-
-The backend part of this application was initialized using Spring Initializr. The project was created with the following configuration on [Spring Initializr](https://start.spring.io/):
-
-- Project Name: [Your Project Name]
-- Description: [Your Project Description]
-- Package: JAR
-- Type: Maven Project
-- Language: Java (Version 17)
-
 ## Dependencies
 
 The following dependencies were added to the project:
@@ -77,9 +64,3 @@ Articles
   GET /articles/heading/{heading}: Get articles by heading.
   GET /articles/trending: Get a random trending article.
 
-### Installation
-
-1. Clone the repository:
-
-   ```shell
-   git clone https://github.com/marslanagic/applied-programming-backend.git
